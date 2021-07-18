@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+// Primary Colors
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%);
+$darkblue: hsl(198, 62%, 26%);
+$dark-moderate-cyan: hsl(168, 34%, 41%);
+$sky-blue: rgb(61, 190, 255);
+$hover-sky-blue: rgb(163, 234, 255);
+$cotton-candy-blue: rgb(163, 227, 214);
+
+//Netural Colors
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Fraunces";
+}
+p {
+  font-family: "Barlow";
+  color: $very-dark-grayish-blue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $sky-blue;
+  a {
+    text-decoration: none;
+
+    color: white;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin: 1em 1.5em;
+    }
+  }
+  #home {
+    font-size: 25px;
+    margin-left: 1em;
+    font-weight: bold;
+  }
+  #contact {
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  #contact:hover {
+    color: white;
+    background-color: $hover-sky-blue;
+  }
+}
+main {
+  display: flex;
+  position: relative;
+  background-color: $sky-blue;
+  text-align: center;
+  height: 93vh;
+  background: url(../images/desktop/image-header.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  h1 {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50px;
+    letter-spacing: 8px;
+    font-size: 50px;
+  }
+  .arrow {
+    position: absolute;
+    height: 120px;
+    left: 50%;
+    top: 35%;
+  }
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 600px 600px 600px;
+  h2 {
+    font-size: 40px;
+    color: $very-dark-desaturated-blue;
+  }
+  p {
+    color: $very-dark-grayish-blue;
+
+    padding: 30px 0px 50px 0px;
+    line-height: 30px;
+  }
+  a {
+    text-transform: uppercase;
+    color: $very-dark-desaturated-blue;
+    text-decoration: none;
+  }
+  a:hover:after {
+    content: "";
+    transform: translate(-5%, -80%);
+    display: block;
+    // background-color: hsl(51, 100%, 49%);
+    border-radius: 2rem;
+    width: 9%;
+    height: 10px;
+    position: absolute;
+    z-index: -1;
+  }
+  .transform {
+    margin: 150px 100px;
+    padding-right: 100px;
+    h2 {
+      padding-right: 3em;
+    }
+    a:hover:after {
+      background-color: hsl(51, 100%, 49%);
+    }
+  }
+  .egg {
+    background: url(../images/desktop/image-transform.jpg);
+  }
+  .cup {
+    background: url(../images/desktop/image-stand-out.jpg);
+  }
+  .stand-out {
+    padding-right: 100px;
+
+    margin: 150px 100px;
+    a:hover:after {
+      background-color: rgb(255, 115, 100);
+    }
+  }
+  .graphic-design {
+    text-align: center;
+    h2,
+    p {
+      color: $dark-desaturated-cyan;
+    }
+
+    background: url(../images/desktop/image-graphic-design.jpg);
+  }
+  .photography {
+    text-align: center;
+    h2,
+    p {
+      color: $darkblue;
+    }
+    background: url(../images/desktop/image-photography.jpg);
+  }
+  .text {
+    margin: 50% 200px;
+  }
+}
+
+.testimonials {
+  margin-top: 160px;
+  img {
+    border-radius: 100%;
+    width: 120px;
+  }
+  h1 {
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $very-dark-grayish-blue;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+    text-align: center;
+    p {
+      margin: 80px 0;
+      line-height: 30px;
+      padding: 0 50px;
+    }
+  }
+  .person1 {
+    margin-left: 100px;
+  }
+  .person3 {
+    margin-right: 100px;
+  }
+  #name {
+    font-size: 18px;
+  }
+  #job {
+    margin: 15px 0;
+    font-family: "Barlow";
+    color: $grayish-blue;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  img {
+    width: 100%;
+  }
+}
+footer {
+  padding: 80px;
+  background-color: $cotton-candy-blue;
+  text-align: center;
+  h1 {
+    color: $dark-desaturated-cyan;
+    margin-bottom: 50px;
+  }
+  a {
+    color: $dark-desaturated-cyan;
+
+    font-family: "Barlow";
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  a:hover {
+    color: white;
+  }
+  .socials {
+    margin-top: 70px;
+    a {
+      margin: 0 15px;
+    }
+    a:hover {
+      filter: brightness(0) invert(1);
+    }
+  }
+  #credits {
+    span {
+      a {
+        margin: 0 5px;
+        font-family: "Fraunces";
+        text-decoration: underline;
+      }
+      a:hover {
+        color: rgb(230, 251, 255);
+      }
+    }
+    font-family: "Fraunces";
+    font-size: 20px;
+    padding: 30px 30px 0;
+    color: $dark-desaturated-cyan;
+  }
+}
