@@ -88,10 +88,28 @@ main {
     top: 35%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px 600px 600px 600px;
+    grid-template-areas:
+      "transform "
+      "egg"
+      "cup"
+      "stand-out"
+      "graphic-design"
+      "photography";
+  }
+}
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 600px 600px 600px;
+  grid-template-areas:
+    "transform egg"
+    "cup stand-out"
+    "graphic-design photography";
   h2 {
     font-size: 40px;
     color: $very-dark-desaturated-blue;
@@ -119,6 +137,7 @@ main {
     z-index: -1;
   }
   .transform {
+    grid-area: transform;
     margin: 150px 100px;
     padding-right: 100px;
     h2 {
@@ -129,12 +148,18 @@ main {
     }
   }
   .egg {
+    grid-area: egg;
+
     background: url(../images/desktop/image-transform.jpg);
   }
   .cup {
+    grid-area: cup;
+
     background: url(../images/desktop/image-stand-out.jpg);
   }
   .stand-out {
+    grid-area: stand-out;
+
     padding-right: 100px;
 
     margin: 150px 100px;
@@ -143,6 +168,8 @@ main {
     }
   }
   .graphic-design {
+    grid-area: graphic-design;
+
     text-align: center;
     h2,
     p {
@@ -152,6 +179,8 @@ main {
     background: url(../images/desktop/image-graphic-design.jpg);
   }
   .photography {
+    grid-area: photography;
+
     text-align: center;
     h2,
     p {
@@ -161,6 +190,20 @@ main {
   }
   .text {
     margin: 50% 200px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px 600px 600px 600px 600px;
+    grid-template-areas:
+      "transform "
+      "egg"
+      "cup"
+      "stand-out"
+      "graphic-design"
+      "photography";
   }
 }
 
@@ -180,6 +223,7 @@ main {
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "person1 person2 person3";
   }
   .person {
     display: flex;
@@ -195,9 +239,15 @@ main {
     }
   }
   .person1 {
+    grid-area: person1;
     margin-left: 100px;
   }
+  .person2 {
+    grid-area: person2;
+  }
   .person3 {
+    grid-area: person3;
+
     margin-right: 100px;
   }
   #name {
@@ -209,12 +259,66 @@ main {
     color: $grayish-blue;
   }
 }
-
+@media only screen and (max-width: 800px) {
+  .testimonials {
+    h1 {
+      // margin-bottom: 30px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $very-dark-grayish-blue;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "person1"
+        "person2"
+        "person3";
+    }
+    .person {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 120px;
+      text-align: center;
+      p {
+        font-size: 20px;
+        // margin: 80px 0;
+        line-height: 30px;
+        // padding: 0 50px;
+      }
+    }
+  }
+}
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "milk orange icecream sugar";
   img {
     width: 100%;
+  }
+  #milk {
+    grid-area: milk;
+  }
+  #orange {
+    grid-area: orange;
+  }
+  #icecream {
+    grid-area: icecream;
+  }
+  #sugar {
+    grid-area: sugar;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "milk orange"
+      "icecream sugar";
   }
 }
 footer {

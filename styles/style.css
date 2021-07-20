@@ -92,6 +92,18 @@ main .arrow {
   top: 35%;
 }
 
+@media only screen and (max-width: 600px) {
+  .features {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 600px 600px 600px 600px 600px;
+        grid-template-rows: 600px 600px 600px 600px 600px;
+        grid-template-areas: "transform " "egg" "cup" "stand-out" "graphic-design" "photography";
+  }
+}
+
 .features {
   display: -ms-grid;
   display: grid;
@@ -99,6 +111,7 @@ main .arrow {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 600px 600px 600px;
       grid-template-rows: 600px 600px 600px;
+      grid-template-areas: "transform egg" "cup stand-out" "graphic-design photography";
 }
 
 .features h2 {
@@ -131,6 +144,9 @@ main .arrow {
 }
 
 .features .transform {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: transform;
   margin: 150px 100px;
   padding-right: 100px;
 }
@@ -144,14 +160,23 @@ main .arrow {
 }
 
 .features .egg {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: egg;
   background: url(../images/desktop/image-transform.jpg);
 }
 
 .features .cup {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cup;
   background: url(../images/desktop/image-stand-out.jpg);
 }
 
 .features .stand-out {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: stand-out;
   padding-right: 100px;
   margin: 150px 100px;
 }
@@ -161,6 +186,9 @@ main .arrow {
 }
 
 .features .graphic-design {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: graphic-design;
   text-align: center;
   background: url(../images/desktop/image-graphic-design.jpg);
 }
@@ -171,6 +199,9 @@ main .arrow {
 }
 
 .features .photography {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: photography;
   text-align: center;
   background: url(../images/desktop/image-photography.jpg);
 }
@@ -182,6 +213,18 @@ main .arrow {
 
 .features .text {
   margin: 50% 200px;
+}
+
+@media only screen and (max-width: 800px) {
+  .features {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 600px 600px 600px 600px 600px 600px;
+        grid-template-rows: 600px 600px 600px 600px 600px 600px;
+        grid-template-areas: "transform " "egg" "cup" "stand-out" "graphic-design" "photography";
+  }
 }
 
 .testimonials {
@@ -206,6 +249,7 @@ main .arrow {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "person1 person2 person3";
 }
 
 .testimonials .person {
@@ -233,10 +277,22 @@ main .arrow {
 }
 
 .testimonials .person1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: person1;
   margin-left: 100px;
 }
 
+.testimonials .person2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: person2;
+}
+
 .testimonials .person3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: person3;
   margin-right: 100px;
 }
 
@@ -250,15 +306,87 @@ main .arrow {
   color: #a7abae;
 }
 
+@media only screen and (max-width: 800px) {
+  .testimonials h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #5a636c;
+  }
+  .testimonials .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "person1" "person2" "person3";
+  }
+  .testimonials .person {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px 120px;
+    text-align: center;
+  }
+  .testimonials .person p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .products {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "milk orange icecream sugar";
 }
 
 .products img {
   width: 100%;
+}
+
+.products #milk {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: milk;
+}
+
+.products #orange {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: orange;
+}
+
+.products #icecream {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: icecream;
+}
+
+.products #sugar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: sugar;
+}
+
+@media only screen and (max-width: 800px) {
+  .products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "milk orange" "icecream sugar";
+  }
 }
 
 footer {
